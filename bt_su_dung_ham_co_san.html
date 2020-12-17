@@ -6,10 +6,50 @@
 </head>
 <body>
 <script>
+    //baitap1
     var color = ["Red", "Green", "White", "Black"]
     document.write(color.join(), "<br/>");
     document.write(color.toString(),"<br/>");
     document.write(color.join("-"));
+    //baitap2
+    var num = window.prompt();
+    var str = num.toString();
+    var result = [str[0]];
+
+    for(var x=1; x<str.length; x++)
+    {
+        /if((str[x-1]%2 === 0)&&(str[x]%2 === 0))
+        {
+            result.push('-', str[x]);
+        }
+        else
+        {
+            result.push(str[x]);
+        }
+    }
+    document.write(result.join(''));
+    //baitap3
+    str = prompt();
+    var UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    var LOWER = 'abcdefghijklmnopqrstuvwxyz';
+    var result = [];
+
+    for(var x=0; x<str.length; x++)
+    {
+        if(UPPER.indexOf(str[x]) !== -1)
+        {
+            result.push(str[x].toLowerCase());
+        }
+        else if(LOWER.indexOf(str[x]) !== -1)
+        {
+            result.push(str[x].toUpperCase());
+        }
+        else
+        {
+            result.push(str[x]);
+        }
+    }
+    console.log(result.join(''));
 </script>
 
 </body>
